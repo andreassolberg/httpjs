@@ -1,7 +1,7 @@
 {
-	"name": "flippedBackend",
-	"description": "Backend running in your browser",
-	"version": "0.0.1",
+	"name": "httpjs",
+	"description": "Prototype an API in your browser",
+	"version": "0.1",
 	"private": true,
 	"dependencies": {
 		"express": "3.x",
