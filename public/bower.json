@@ -1,0 +1,9 @@
+{
+	"name": "flippedbackend",
+	"dependencies": {
+		"bootstrap": "*",
+		"requirejs": "*",
+		"ace-builds": "master",
+		"highlightjs": "*"
+	}
+}
