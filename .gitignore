@@ -1,3 +1,6 @@
 node_modules
 public/bower_components
 etc/config.js
+etc/httpjs.pem
+etc/httpjs.crt
+etc/httpjs.key
