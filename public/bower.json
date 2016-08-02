@@ -1,9 +1,12 @@
 {
-	"name": "flippedbackend",
-	"dependencies": {
-		"bootstrap": "*",
-		"requirejs": "*",
-		"ace-builds": "master",
-		"highlightjs": "*"
-	}
+  "name": "flippedbackend",
+  "dependencies": {
+    "bootstrap": "*",
+    "requirejs": "*",
+    "ace-builds": "master",
+    "highlightjs": "*",
+    "momentjs": "~2.8.2",
+    "select2": "~3.5.1",
+    "requirejs-text": "~2.0.12"
+  }
 }

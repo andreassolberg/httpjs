@@ -1,12 +1,13 @@
 {
 	"name": "httpjs",
-	"description": "Prototype an API in your browser",
-	"version": "0.1",
+	"description": "HTTPjs - Prototype an API in your browser",
+	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
 		"express": "3.x",
 		"socket.io": "*",
 		"body-parser": "*",
-		"nconf": "*"
+		"nconf": "*",
+		"basic-auth-parser": "*"
 	}
 }
