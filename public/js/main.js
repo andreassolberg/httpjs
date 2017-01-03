@@ -8,16 +8,12 @@ require.config({
     }
 });
 
-
-
 define(function(require, exports, module) {
-
 
 	var OutputController = require('controllers/OutputController');
 	var Output = require('models/Output');
 	var EditorLoader = require('controllers/EditorLoader');
 	var Transaction = require('models/Transaction');
-
 
 	var Session = function() {
 
@@ -75,7 +71,7 @@ $(document).ready(function() {
     	location.reload();
     });
 
-	
+
 	hljs.initHighlightingOnLoad();
 
 	var socket = io.connect('https://httpjs.net');

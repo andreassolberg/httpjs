@@ -40,8 +40,8 @@ define(function(require, exports, module) {
 		var type = (secs > 5 ? 'danger'
 				: (secs > 2 ? 'warning' : 'success')
 			);
-			
-		return this.getReqHead() + ' <span class="label label-' + type + ' pull-right">' + 
+
+		return this.getReqHead() + ' <span class="label label-' + type + ' pull-right">' +
 			this.getTime() + '</span>';
 	};
 
@@ -53,7 +53,7 @@ define(function(require, exports, module) {
 		}
 		// reqtxt += 'Body type ' + (typeof this.request.body) + "\n";
 		if (this.request.rawBody !== '') {
-			reqtxt +=  "\n" + this.request.rawBody + "\n";	
+			reqtxt +=  "\n" + this.request.rawBody + "\n";
 		}
 		return reqtxt;
 	};
