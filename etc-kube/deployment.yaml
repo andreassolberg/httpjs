@@ -4,9 +4,11 @@ kind: Deployment
 metadata:
   name: httpjs
   namespace: production
+  labels:
+     app: httpjs
 spec:
   replicas: 1
-  minReadySeconds: 5
+  minReadySeconds: 2
   strategy:
     type: RollingUpdate
   template:
@@ -26,7 +28,10 @@ spec:
             memory: 300Mi
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
         volumeMounts:
         - name: httpjs
           mountPath: "/usr/src/httpjs/etc/certs"

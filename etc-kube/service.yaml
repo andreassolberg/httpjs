@@ -1,0 +1,19 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: httpjs
+  namespace: production
+spec:
+  selector:
+    app: httpjs
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: http
+    name: http
+  - protocol: TCP
+    port: 443
+    targetPort: https
+    name: https
+  type: LoadBalancer
