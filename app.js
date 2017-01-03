@@ -1,46 +1,33 @@
 "use strict";
 
 var fs = require('fs');
-
 var http = require('http');
 var https = require('https');
 var express = require('express');
 var constants = require('constants');
 
-
 var app = express();
 var httpapp = express();
-
-
 var nconf = require('nconf');
-
 var bodyParser = require('body-parser');
-
 var APIrouter = require('./lib/apirouter').APIrouter;
 
-
-
-
 // First consider commandline arguments and environment variables, respectively.
-nconf.argv().env();
-
+nconf.argv().env('__');
 // Then load configuration from a designated file.
 nconf.file({ file: 'etc/config.js' });
-
 // Provide default values for settings not provided above.
 nconf.defaults({
     'http': {
         'port': 80,
+        'securePort': 443,
         'host': 'httpjs.net'
     }
 });
 
 
-
-
-
-var privateKey  = fs.readFileSync('etc/httpjs.pem', 'utf8');
-var certificate = fs.readFileSync('etc/httpjs.crt', 'utf8');
+var privateKey  = fs.readFileSync('etc/certs/httpjs.pem', 'utf8');
+var certificate = fs.readFileSync('etc/certs/httpjs.crt', 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 credentials.secureProtocol = 'SSLv23_method';
 credentials.secureOptions = constants.SSL_OP_NO_SSLv3;
@@ -48,15 +35,19 @@ credentials.secureOptions = constants.SSL_OP_NO_SSLv3;
 
 var server = http.createServer(httpapp);
 var httpsServer = https.createServer(credentials, app);
+// var httpsServer = https.createServer(app);
 var io = require('socket.io')(httpsServer);
 
 var port = nconf.get('http:port');
+var securePort = nconf.get('http:securePort');
 var host = nconf.get('http:host');
-var baseURL = '.' + host; 
-console.log("Setting up server to listen at port " + port);
+var baseURL = '.' + host;
+
+console.log("Setting up server to listen at port " + port + " and " + securePort + " on host " + host);
+
 server.listen(port);
 
-httpsServer.listen(443);
+httpsServer.listen(securePort);
 
 
 
@@ -66,7 +57,7 @@ httpapp.use(function(req,res,next) {
      res.redirect(301, "https://" + req.headers.host + req.url);
   } else {
      return next();
-  } 
+  }
 });
 
 
@@ -100,14 +91,14 @@ app.use(bodyParser.json());
 app.use(function(req, res, next) {
 	req.rawBody = '';
 
-	req.on('data', function(chunk) { 
+	req.on('data', function(chunk) {
 		req.rawBody += chunk;
 	});
 
 	// setTimeout(function() {
-		next();	
+		next();
 	// }, 10);
-	
+
 });
 
 app.use(function(req, res, next) {
@@ -139,7 +130,7 @@ io.on('connection', function (socket) {
 	socket.on('ping', function() {
 
 		if (x !== null) {
-			ar.ping(x);	
+			ar.ping(x);
 		}
 	});
 
@@ -158,7 +149,7 @@ io.on('connection', function (socket) {
 		});
 		console.log("Successfully registered as " + x);
 	});
-	
+
 	socket.on('response', function (msg) {
 		console.log("frontend responded back"); console.log(msg);
 		ar.response(msg);
@@ -171,5 +162,3 @@ io.on('connection', function (socket) {
 	});
 
 });
-
-
