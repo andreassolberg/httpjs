@@ -7,7 +7,7 @@ set +a
 
 docker stop ${KUBERNETES_DEPLOYMENT}
 docker rm ${KUBERNETES_DEPLOYMENT}
-docker run -d --name ${KUBERNETES_DEPLOYMENT} \
+docker run -d -p 8880:80 -p 8843:443 --name ${KUBERNETES_DEPLOYMENT} \
   -v ${PWD}/app.js:/usr/src/httpjs/app.js \
   --env-file ENV ${IMAGE}
 docker logs -f ${KUBERNETES_DEPLOYMENT}
