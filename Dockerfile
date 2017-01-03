@@ -9,7 +9,7 @@ WORKDIR /usr/src/httpjs
 
 RUN npm install
 RUN npm install -g bower
-RUN cd public/ && bower install --allow-root
+RUN bower install --allow-root
 RUN cd /usr/src/httpjs/public/bower_components && git clone https://github.com/andreassolberg/uninett-bootstrap-theme.git uninett-theme && cd uninett-theme && bower install --allow-root
 RUN curl -o /usr/src/httpjs/public/bower_components/uninett-theme/fonts/colfaxLight.woff http://mal.uninett.no/uninett-theme/fonts/colfaxLight.woff
 RUN curl -o /usr/src/httpjs/public/bower_components/uninett-theme/fonts/colfaxMedium.woff http://mal.uninett.no/uninett-theme/fonts/colfaxMedium.woff
