@@ -1,11 +1,5 @@
 define(function(require, exports, module) {
 
-
-	var moment = require('bower/momentjs/moment');
-
-	// console.log("M", m);
-
-
 	var Output = function(request, response) {
 
 		// console.log("moment", moment);
