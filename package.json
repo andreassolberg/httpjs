@@ -2,6 +2,9 @@
 	"name": "httpjs",
 	"description": "HTTPjs - Prototype an API in your browser",
 	"version": "1.0.0",
+	"scripts": {
+		"start": "node app.js"
+	},
 	"private": true,
 	"dependencies": {
 		"express": "3.x",
