@@ -5,6 +5,16 @@ An API prototyping tool running in your browser
 
 
 
+## Building and running
+
+
+```
+
+```
+
+
+----
+
 First, client establishes a websockets connection with the backend:
 
 	var socket = io.connect('http://httpjs.net');
@@ -23,7 +33,7 @@ The backend, when receives a `register` message, returns with a `registered` res
 
 ----
 
-When the backend receives an incomming HTTP Request on `http://xxx.httpjs.net`, the backend is emitting a `request` message to the frontend:
+When the backend receives an incoming HTTP Request on `http://xxx.httpjs.net`, the backend is emitting a `request` message to the frontend:
 
 
 	var msg = {
@@ -69,7 +79,3 @@ When the backend receives the `response` message it sends a response back to the
 		// 'r': msg.res
 	};
 	msg.socket.emit('response', rmsg);
-
-
-
-
