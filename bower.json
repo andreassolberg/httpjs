@@ -1,7 +1,7 @@
 {
   "name": "httpjs",
   "dependencies": {
-    "bootstrap": "*",
+    "uninett-bootstrap-theme": "*",
     "requirejs": "*",
     "ace-builds": "master",
     "highlightjs": "*",

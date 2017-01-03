@@ -6,14 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="Andreas Åkre Solberg">
-	<link rel="shortcut icon" href="bower_components/uninett-theme/ico/favicon.ico">
+	<link rel="shortcut icon" href="bower_components/uninett-bootstrap-theme/ico/favicon.ico">
 	<title>HTTPjs – UNINETT</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="bower_components/uninett-theme/css/uninett.css" rel="stylesheet">
+	<link href="bower_components/uninett-bootstrap-theme/css/uninett.css" rel="stylesheet">
 
 
 	<link rel="stylesheet" href="bower_components/select2/select2.css">
@@ -22,7 +22,7 @@
 	<link rel="stylesheet" href="bower_components/highlightjs/styles/default.css">
 
 	<style type="text/css" media="screen">
-		#editor { 
+		#editor {
 			position: relative;
 			height: 600px;
 			border: 1px solid #bbb;
@@ -49,8 +49,8 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
 
-				<a class="navbar-brand" href="/"><img src="bower_components/uninett-theme/images/UNINETT_logo.svg" alt="Uninett logo" type="image/svg+xml"></a>
-				
+				<a class="navbar-brand" href="/"><img src="bower_components/uninett-bootstrap-theme/images/UNINETT_logo.svg" alt="Uninett logo" type="image/svg+xml"></a>
+
 			</div>
 			<div class="navbar-department">
 				<div class="department"><a style="text-decoration: none; color: #000" href="/"><span style="font-style: thin">HTTP</span>js</a></div>
@@ -61,7 +61,7 @@
 			<ul class="nav navbar-nav">
 				<li><a class="" target="_blank" href="/docs.html">Documentation</a></li>
 			</ul>
-			
+
 
 
 		</div>
@@ -72,7 +72,7 @@
 	<div class="container-fluid">
 
 		<div class="row" id="disconnected" style="display: none">
-			<div class="col-lg-12"> 
+			<div class="col-lg-12">
 				<!-- Main component for a primary marketing message or call to action -->
 				<div class="jumbotron uninett-color-orange">
 					<h1>Disconnected</h1>
@@ -88,7 +88,7 @@
 
 
 		<div id="banner" class="row hideOnStart">
-			<div class="col-lg-12"> 
+			<div class="col-lg-12">
 				<!-- Main component for a primary marketing message or call to action -->
 				<div class="jumbotron uninett-color-darkBlue uninett-pattern1">
 					<h1>Server API Mock-Ups in your browser</h1>
@@ -103,7 +103,7 @@
 		</div>
 
 		<div class="row gutter" id="urlcontainer" style="display: none">
-			<div class="col-lg-12 "> 
+			<div class="col-lg-12 ">
 				<div class="uninett-color-white ">
 
 					<pre class="" style="font-size: 100%; padding: 12px 30px" value=""><span class="insertHost"></span><span id="statusLabel" class="label label-success pull-right">Connected</span></pre>
@@ -112,10 +112,10 @@
 			</div>
 
 		</div>
-		
+
 
 		<div class="row gutter hideOnStart" style="">
-			<div class="col-lg-12 "> 
+			<div class="col-lg-12 ">
 				<div class="uninett-color-white uninett-padded ">
 
 					<p>To get started, you may use curl to fire a request to your new server, like this:</p>
@@ -131,7 +131,7 @@
 
 
 		<div class="row gutter " id="inspector" style="display: none; padding: auto auto; margin: 15px auto auto auto; ">
-			<div class="col-lg-4 "> 
+			<div class="col-lg-4 ">
 				<div id="iList" class=" ">
 
 					<div id="outputindex" class="list-group" style="font-size: 90%">
@@ -140,7 +140,7 @@
 
 				</div>
 			</div>
-			<div class="col-lg-4"> 
+			<div class="col-lg-4">
 				<div id="iReq" class="uninett-color-white "></div>
 				<div id="iBody" >
 					<p>Parsed body (the original request body may differ): </p>
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-4"> 
+			<div class="col-lg-4">
 				<div  id="iRes" class="uninett-color-white "></div>
 
 
@@ -159,7 +159,7 @@
 
 
 		<div class="row gutter">
-			<div class="col-lg-12 "> 
+			<div class="col-lg-12 ">
 
 				<div style="padding: 1em">
 					<div class="pull-right" style="width: 40%" >
@@ -178,7 +178,7 @@
 
 				<!-- Main component for a primary marketing message or call to action -->
 				<div class="uninett-color-white" style="margin-top: 10px">
-					
+
 					<div id="editor"></div>
 
 				</div>
@@ -187,7 +187,7 @@
 
 
 		<div class="row gutter">
-			<div class="col-lg-12 "> 
+			<div class="col-lg-12 ">
 				<!-- Main component for a primary marketing message or call to action -->
 				<div class="uninett-color-white uninett-padded">
 
@@ -214,11 +214,11 @@
 
 
 
-					</div>	
+					</div>
 
 					<p style="margin-bottom: 0px; text-align: center"><a href="http://uninett.no">UNINETT</a> &#9829; HTTP</p>
-					<p style="margin-bottom: 0px; text-align: center">We hope you find this tool useful. 
-						For comments <a href="mailto:andreas.solberg@uninett.no">contact Andreas Åkre Solberg</a> or 
+					<p style="margin-bottom: 0px; text-align: center">We hope you find this tool useful.
+						For comments <a href="mailto:andreas.solberg@uninett.no">contact Andreas Åkre Solberg</a> or
 						<a target="_blank" href="https://github.com/andreassolberg/httpjs/issues">ask questions, request features or report issues</a>.</p>
 				<!-- 	<p style="margin-bottom: 0px; text-align: center">Stay tuned. Later additions to this API testing tool may provide tools for OAuth 2.0 and OpenID Connect.</p> -->
 				</div>
@@ -229,12 +229,12 @@
 
 
 
-	<!-- /container --> 
+	<!-- /container -->
 
-	<!-- Bootstrap core JavaScript --> 
-	<!-- Placed at the end of the document so the pages load faster --> 
-	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> 
-	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script> 
+	<!-- Bootstrap core JavaScript -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 
 	<script type="text/javascript" src="bower_components/ace-builds/src-noconflict/ace.js" charset="utf-8"></script>
