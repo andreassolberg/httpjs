@@ -1,2 +1,4 @@
 node_modules
 ENV
+etc/certs
+etc-kube
